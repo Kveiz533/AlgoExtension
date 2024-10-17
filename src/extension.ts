@@ -81,34 +81,35 @@ function getWebviewContent() {
 <body>
     
     <h2> Бытсрая Сортировка (Quick Sort) </h2>
-    <h3> void QuickSort(int *arr, int left, int right) { </h3>
-    <p style="margin-left:20px"> int i = left; </p>
-    <p style="margin-left:20px"> int j = right; </p>
-    <p style="margin-left:20px">     int pivot = arr[left + rand() % (right - left + 1)]; </p>
+<pre> <code>
+void QuickSort(int *arr, int left, int right) { 
+    int i = left; 
+    int j = right; 
+    int pivot = arr[left + rand() % (right - left + 1)];
 
-    <p style="margin-left:20px">    while (i <= j) { </p>
-    <p style="margin-left:40px">         while (arr[i] < pivot) { </p>
-    <p style="margin-left:60px">             ++i; </p>
-    <p style="margin-left:40px">          } </p>
-    <p style="margin-left:40px">          while (arr[j] > pivot) {</p>
-    <p style="margin-left:60px">             --j; </p>
-    <p style="margin-left:40px">         } </p>
-    <p style="margin-left:40px">         if (i <= j) { </p>
-    <p style="margin-left:60px">             std::swap(arr[i], arr[j]); </p>
-    <p style="margin-left:60px">             ++i; </p>
-    <p style="margin-left:60px">             --j;</p>
-    <p style="margin-left:40px">         } </p>
-    <p style="margin-left:20px">     } </p>
+    while (i <= j) { 
+        while (arr[i] < pivot) { 
+            ++i; 
+        } 
+        while (arr[j] > pivot) {
+            --j; 
+        } 
+        if (i <= j) { 
+            std::swap(arr[i], arr[j]); 
+            ++i; 
+            --j;
+        } 
+    } 
 
-    <p style="margin-left:20px">     if (left < j) {</p>
-    <p style="margin-left:40px">         QuickSort(arr, left, j);</p>
-    <p style="margin-left:20px">     }</p>
-    <p style="margin-left:20px">     if (right > i) {</p>
-    <p style="margin-left:40px">         QuickSort(arr, i, right);</p>
-    <p style="margin-left:20px">     }</p>
-    <p> } </p>
+    if (left < j) {
+        QuickSort(arr, left, j);
+    }
+    if (right > i) {
+        QuickSort(arr, i, right);
+    }
+} </code> </pre>
 
-    <img src="https://cf.ppt-online.org/files/slide/i/ikywmZCofVpWGSEAYdrPa51UvB9THzqKF4e7X2/slide-12.jpg"> </img>
+    <img src="https://techrocks.ru/wp-content/uploads/2020/08/vo2ltivrpucxtoamvdeb.gif"> </img>
 </body>
 </html>`;
 }
